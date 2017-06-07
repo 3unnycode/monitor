@@ -39,7 +39,7 @@ public class DubboMonitor {
 				ThreadPoolExecutor tp = (ThreadPoolExecutor) executor;
 				Monitor monitor = MonitorFactory.connect();
 				monitor.writePoint(
-						MonitorPoint.monitorKey("wireless.dubbo.threadpool.active").addTag("systemCode", systemCode)
+						MonitorPoint.monitorKey("dubbo.threadpool.active").addTag("systemCode", systemCode)
 								.addTag("port", port).addField("val", tp.getActiveCount()).build());
 			}
 		}
